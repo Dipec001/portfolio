@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="icon" href="{% static 'images/letterd.jpg' %}" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="{% static 'styles.js' %}" defer></script>
+    <title>Divine Chukwu</title>
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <div class="navbar">
+                <a href="/"><img src="{% static 'images/letterd.jpg' %}" alt="Divine logo"></a>
+                <div class="links">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    <a class="nav-link" href="{% url 'index' %}#about">About</a>
+                    <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                    <a class="nav-link" href="{% url 'index' %}#contact">Contact</a>
+                    <a class="nav-link" href="{% static 'images/divineresume.pdf' %}" download>My Resume</a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h4>Hello, my name is</h4>
+        <h1>Divine Chukwu</h1>
+        <p class="info">
+            I'm a Senior Software Developer based in Nigeria, who's currently working at building different projects with different programming languages and methods.
+        </p>
+    </section>
+    <section id="about">
+        <h2>About me</h2>
+        <div class="about-div">
+            <div class="projects">
+                <img data-aos="zoom-in" class="about-img" src="{% static 'images/profile-picture.jpg' %}" alt="Photo of Divine">
+                <a class="project-link" href="{% url 'projects' %}">Check out my projects</a>
+            </div>
+            <div class="info-div">
+                <p class="about-info">
+                    As a native of Cameroon, I relocated to Nigeria in search of greater career opportunities upon completing high school. Fueled by my passion for software development, I took the initiative to self-learn through online platforms such as Udemy.
+                </p>
+                <p class="about-info">
+                    Determined to fully immerse myself in the field, I enrolled in the highly regarded immersive coding bootcamp, 100 days of Code, where I thrived and significantly advanced my coding abilities. This rigorous training equipped me with the skills and confidence to make meaningful contributions to the dynamic tech industry.
+                </p>
+                <p class="about-info">
+                    Here are a few technologies I work with:
+                </p>
+                <ul class="skills">
+                    <li>Python</li>
+                    <li>PostgreSQL</li>
+                    <li>Django</li>
+                    <li>Pandas</li>
+                    <li>Flask</li>
+                    <li>SQLite</li>
+                    <li>Matplotlib</li>
+                    <li>Selenium</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h3>Get in touch</h3>
+        <p class="question">
+            Got a question or proposal, or just want to say hello?
+        </p>
+        <a class="cv" href="mailto:dpecchukwu@gmail.com">Email me</a>
+    </section>
+    <footer>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/divine-chukwu-63bb04145/" target="_blank"><img class="icon" src="{% static 'images/linkedin-icon.png' %}" alt="LinkedIn icon"></a>
+            <a href="https://github.com/Dipec001" target="_blank"><img class="icon" src="{% static 'images/github-icon.png' %}" alt="GitHub icon"></a>
+            <a href="mailto:dpecchukwu@gmail.com"><img class="icon" src="{% static 'images/mail-icon.png' %}" alt="Mail icon"></a>
+        </div>
+        <div class="github">
+            <a class="github-link" href="https://github.com/Dipec001">Copyright © Divine Chukwu</a>
+        </div>
+    </footer>
+</body>
+
+</html>

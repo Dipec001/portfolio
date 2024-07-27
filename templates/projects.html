@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="icon" href="{% static 'images/letterd.jpg' %}" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="{% static 'styles.js' %}" defer></script>
+    <title>Main Projects</title>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <div class="navbar">
+                <a href="/"><img src="{% static 'images/letterd.jpg' %}" alt="Divine logo"></a>
+                <div class="links">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    <a class="nav-link" href="{% url 'index' %}#about">About</a>
+                    <a class="nav-link" href="{% url 'index' %}#contact">Contact</a>
+                    <a class="nav-link" href="{% static 'images/divineresume.pdf' %}">My Resume</a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <h1 class="heading-proj">Main Projects</h1>
+    <div class="projects-div">
+        <div class="proj-info-two">
+            <h2 class="proj-h-two">E-pharma</h2>
+            <p class="proj-p-two">
+                ePharma is an online pharmacy e-commerce platform developed using Django. This project aims to provide users with a seamless and efficient way to purchase medications and health-related products online. It includes features such as user authentication, product search and filtering, a shopping cart, and integration with Stripe for secure payments. Additionally, users can upload their prescriptions for specific medications that require one.
+            </p>
+            <div class="frame-div-two">
+                <p class="frameworks-two">Django</p>
+                <p class="frameworks-two">Javascript</p>
+                <p class="frameworks-two">HTML</p>
+                <p class="frameworks-two">CSS</p>
+                <p class="frameworks-two">Celery/redis</p>
+                <p class="frameworks-two">Bootstrap</p>
+                <p class="frameworks-two">PostgreSQL</p>
+            </div>
+            <div class="small-links-two">
+                <a href="https://github.com/Dipec001/epharma.git" target="_blank"><img class="small-github" src="{% static 'images/github-icon.png' %}" alt="GitHub icon"></a>
+            </div>
+        </div>
+        <img src="{% static 'images/epharma.png' %}" alt="Epharma app" class="project-img">
+    </div>
+    <div class="projects-div">
+        <img src="{% static 'images/investment.png' %}" alt="Investment website homepage" class="project-img">
+        <div class="proj-info-one">
+            <h2 class="proj-h-one">Investment Website</h2>
+            <p class="proj-p-one">
+                User Authentication: Users can sign up, log in, and reset their passwords. Investment Options: Users can choose from different investment packages with varying profit rates. Account Management: Users can view their account balance, transaction history, and manage their profile. Admin Dashboard: Administrators have access to an admin dashboard to manage user accounts and transactions. Email Notifications: Users receive email notifications for account verification, password reset, and other important actions.
+            </p>
+            <div class="frame-div">
+                <p class="frameworks">Python</p>
+                <p class="frameworks">Flask</p>
+                <p class="frameworks">JS</p>
+                <p class="frameworks">PostgreSQL</p>
+                <p class="frameworks">Render</p>
+            </div>
+            <div class="small-links">
+                <a href="https://github.com/Dipec001/investment-website.git" target="_blank"><img class="small-github" src="{% static 'images/github-icon.png' %}" alt="GitHub icon"></a>
+                <a href="https://investment-website.onrender.com" target="_blank">
+                    <img class="small-link" src="{% static 'images/external-link.png' %}" alt="Link icon">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="projects-div">
+        <div class="proj-info-two">
+            <h2 class="proj-h-two">Todo</h2>
+            <p class="proj-p-two">
+                Todo web application with login and authentication developed using Django and deployed via Render.
+            </p>
+            <div class="frame-div-two">
+                <p class="frameworks-two">Django</p>
+                <p class="frameworks-two">HTML</p>
+                <p class="frameworks-two">CSS</p>
+                <p class="frameworks-two">Bootstrap</p>
+                <p class="frameworks-two">PostgreSQL</p>
+            </div>
+            <div class="small-links-two">
+                <a href="https://github.com/Dipec001/Todo-app.git" target="_blank"><img class="small-github" src="{% static 'images/github-icon.png' %}" alt="GitHub icon"></a>
+                <a href="https://todo-b4qi.onrender.com/" target="_blank">
+                    <img class="small-link" src="{% static 'images/external-link.png' %}" alt="Link icon">
+                </a>
+            </div>
+        </div>
+        <img src="{% static 'images/todo.png' %}" alt="Todo app" class="project-img">
+    </div>
+</body>
+</html>
